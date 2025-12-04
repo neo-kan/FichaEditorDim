@@ -1,5 +1,5 @@
 <?php
-$archivo = __DIR__ . '/img/modelos/info.json';
+$archivo = __DIR__ . '/img/modelos/infoModelos.json';
 
 $data = json_decode(file_get_contents($archivo), true);
 
