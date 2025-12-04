@@ -1,0 +1,24 @@
+{
+    "version": "v1.44",
+    "fecha": "28\/10\/2020",
+    "usuario": "DIM3D",
+    "web": "http:\/\/tecnologiasdim.es",
+    "web_enlaces": "https:\/\/tecnologiasdim.es\/DIM3D\/Enlaces\/",
+    "mail_admin": "info@tusappsonline.com",
+    "mail_reply": "info@tusappsonline.com",
+    "mail_subject": "#USUARIO#, Su dise\u00f1o del producto #PRODUCTO# - #CODIGODISE\u00d1ADOR#",
+    "mail_header": "<p>Estimado Cliente,<\/p><p><br><\/p>",
+    "mail_body": "<p>Le comunicamos que puede revisar el dise\u00f1o del producto #PRODUCTO# en la direcci\u00f3n:<\/p><p><a href=#LINK_LINK#>#LINK#<\/a><\/p><p><br><\/p><p>D\u00f3nde podr\u00e1 ver una versi\u00f3n en 3D del mismo as\u00ed como la ficha con los detalles del producto.<\/p><p><\/p><br>",
+    "mail_sign": "<p>Un Saludo,<\/p><p><br><\/p>El Equipo de Tecnolog\u00edas DIM<p><\/p><a href=#WEB_LINK#>#WEB#<\/a>",
+    "fechaFinLicencia": "01\/01\/2020",
+    "server": "http:\/\/tecnologiasdim.es\/DIM3D\/Repositorios\/",
+    "dise\u00f1ador": {
+        "codigo": "A1",
+        "nombre": "MODELADOR"
+    },
+    "control_publicaciones": {
+        "dise\u00f1o": "",
+        "control": ""
+    },
+    "cache_version": 1764317733
+}

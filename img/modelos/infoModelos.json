@@ -1,0 +1,12 @@
+{
+    "modelos": [
+        {
+            "modelo": "chica.jpg",
+            "imgGenerada": ""
+        },
+        {
+            "modelo": "chica2.jpg",
+            "imgGenerada": "\/imgGenerada\/*"
+        }
+    ]
+}

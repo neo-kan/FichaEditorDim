@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Try-On Automático</title>
+</head>
+<body>
+
+<h1>Generar Try-On</h1>
+
+<button id="btnTryOn">Generar imagen</button>
+
+<div id="status" style="margin-top:10px;"></div>
+<img id="resultImage" style="max-width:400px; margin-top:20px; display:none;" />
+
+<script>
+const btn = document.getElementById("btnTryOn");
+const statusDiv = document.getElementById("status");
+const resultImg = document.getElementById("resultImage");
+
+btn.addEventListener("click", async () => {
+    statusDiv.innerText = "⏳ Enviando job a Tryon API...";
+
+    // 1) Enviar job
+    const resp = await fetch("tryon.php");
+    const data = await resp.json();
+
+    if (data.error) {
+        statusDiv.innerText = "❌ Error: " + data.error;
+        return;
+    }
+
+    const jobId = data.jobId;
+
+    statusDiv.innerText = "✔ Job creado, procesando...";
+
+    // 2) Polling hasta que esté listo
+    let completed = false;
+    let imageUrl = null;
+
+    while (!completed) {
+        await new Promise(r => setTimeout(r, 3000));
+        const statusResp = await fetch("status.php?jobId=" + encodeURIComponent(jobId));
+        const statusData = await statusResp.json();
+
+        if (statusData.error) {
+            statusDiv.innerText = "❌ Error: " + statusData.error;
+            return;
+        }
+
+        if (statusData.status === "completed") {
+            completed = true;
+            imageUrl = statusData.resultUrl;
+        } else {
+            statusDiv.innerText = `⏳ Procesando... (${statusData.status})`;
+        }
+    }
+
+    statusDiv.innerText = "✔ Imagen generada!";
+    resultImg.src = imageUrl;
+    resultImg.style.display = "block";
+});
+</script>
+
+</body>
+</html>

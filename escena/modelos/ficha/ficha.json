@@ -1,0 +1,35 @@
+{
+"capturas": [
+	{ "nombre": "captura1.png", "camara": {
+								"rotacionEscena": 150.0,
+								"width": 1112, "height": 2243,
+								"relativa": false
+								}
+		},
+	{ "nombre": "captura2.png", "camara": {
+								"rotacionEscena": -30.0,
+								"width": 1112, "height": 2243,
+								"relativa": false
+								}
+		}
+	
+	],
+"propiedadesFicha": [
+	{"alias": "Combinada"},
+	{ "canvas": { "x": 480, "y": 600 } },
+	{ "camara": { "distancia": 147.36, "bloqueo": true } },
+	{ "ficha": "ficha.json" },
+	{ "fichabase": "../datos/fichabase.jpg" },
+	
+	{ "imagen": { "nombre": "captura2.png", "width": 1112, "height": 2243,  "x": 952,  "y":  376 } },
+	{ "imagen": { "nombre": "captura1.png", "width": 1112, "height": 2243,  "x": 2120,  "y":  376 } },
+	
+	
+	{ "texto": { "fuente": "../fonts/Oswald-ExtraLight.ttf", "tamaño": 29, "angulo": 0, "x":3543, "y":340, "color": { "r": 0, "g": 0, "b": 0 }, "formvar": "CLIENTE", "texto": "#CLIENTE#" } },
+	{ "texto": { "fuente": "../fonts/Oswald-ExtraLight.ttf", "tamaño": 27, "angulo": 0, "x":3650, "y":495, "color": { "r": 0, "g": 0, "b": 0 }, "formvar": "VALIDACION", "texto": "#VALIDACION#" } },	
+	{ "texto": { "fuente": "../fonts/Oswald-ExtraLight.ttf", "tamaño": 27, "angulo": 0, "x":3955, "y":495, "color": { "r": 0, "g": 0, "b": 0  }, "formvar": "REFERENCIA", "texto": "#REFERENCIA#" } },
+	{ "texto": { "fuente": "../fonts/Oswald-ExtraLight.ttf", "tamaño": 29, "angulo": 0, "x":3543, "y":1610, "color": { "r": 0, "g": 0, "b": 0 }, "formvar": "PRODUCTO", "texto": "#PRODUCTO#" } },
+	{ "texto": { "fuente": "../fonts/Oswald-Regular.ttf", "tamaño": 58, "angulo": 0, "x":2160, "y":2840, "color": { "r": 0, "g": 0, "b": 0 }, "formvar": "VERSION", "texto": "#VERSION#" } }
+	
+	]
+}
